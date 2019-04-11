@@ -12,8 +12,7 @@ import time
 from skydio.comms.http_client import HTTPClient
 
 # This url is the address of the vehicle from the usb-c port
-# If the connected computer is acting as a usb device, not a host.
-USB_URL = 'http://192.168.13.1'
+USB_URL = 'http://192.168.11.1'
 
 # The ip of a machine you want to proxy RTP packets to
 REMOTE_HOST = '192.168.0.26'  # TODO: CHANGE ME TO MATCH YOUR SETUP!
