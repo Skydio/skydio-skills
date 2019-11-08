@@ -1,5 +1,9 @@
 # Getting Started with the Skydio Skills SDK
 
+
+## NOTE: The Skydio SDKs are only available to approved Skydio partners. At this time, we're not accepting new requests for SDK access. We remain interested in expanding our SDK program over time, but there is no timeline on availability.
+
+
 With this guide, you'll be able to create new Skills for the Skydio App to add custom behaviors to your R1.
 Skills are python scripts that run onboard R1 and provide basic UI elements inside the app.
 
