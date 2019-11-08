@@ -1,7 +1,7 @@
 # Getting Started with the Skydio Skills SDK
 
 
-## NOTE: The Skydio SDKs are only available to approved Skydio partners. At this time, we're not accepting new requests for SDK access. We remain interested in expanding our SDK program over time, but there is no timeline on availability.
+## NOTE: This is now only available to approved developers. For the remainder of this year (2019) and into next we are focusing our development resources on supporting a very small number of partners, which unfortunately means we cannot continue to support the beta Skills SDK that was made available for Skydio R1.
 
 
 With this guide, you'll be able to create new Skills for the Skydio App to add custom behaviors to your R1.
