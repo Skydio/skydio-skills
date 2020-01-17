@@ -8,7 +8,7 @@ import numpy as np
 from shared.util.time_manager.time_manager import DownSampler
 
 # The base class for all Skills
-from vehicle.skills.skills import Skill
+from vehicle.skills.base_skill import Skill
 
 # UiElements
 from vehicle.skills.util.ui import UiButton
@@ -72,7 +72,7 @@ class SecurityBot(Skill):
         self.following = False
         self.status_downsampler = DownSampler(1.0)
 
-    def button_pressed(self, api, button_id):
+    def button_pressed(self, api, button_id, source):  # pylint: disable=unused-argument
         """ Called by the sdk whenever the user presses a button """
         print("user pressed {}".format(button_id))
         if button_id == 'set_point':

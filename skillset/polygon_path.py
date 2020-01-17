@@ -1,3 +1,4 @@
+# Prepare for Python3 conversion
 from __future__ import absolute_import
 from __future__ import print_function
 
@@ -7,8 +8,8 @@ import numpy as np
 from shared.util.time_manager import time_manager as tm
 from vehicle.skills.util import core
 
-# The base class for all Skills
-from vehicle.skills.skills import Skill
+# The base class for all Skydio2 Skills
+from vehicle.skills.base_skill import Skill
 
 # UiElements
 from vehicle.skills.util.ui import UiButton
@@ -90,7 +91,7 @@ class PolygonPath(Skill):
         # create a downsampler so we can update AR at most once a second
         self.publish_downsampler = tm.DownSampler(1.0)
 
-    def button_pressed(self, api, button_id):
+    def button_pressed(self, api, button_id, source):  # pylint: disable=unused-argument
         """ Called by the sdk whenever the user presses a button """
         print("user pressed {}".format(button_id))
         if button_id == 'start':

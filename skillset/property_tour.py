@@ -1,10 +1,14 @@
+# Prepare for Python3 conversion
+from __future__ import absolute_import
+from __future__ import print_function
 import enum
 import math
 import numpy as np
 
+# Import from the Skydio2 skills sdk
 from shared.util.error_reporter import error_reporter as er
 from shared.util.time_manager import time_manager as tm
-from vehicle.skills.skills import Skill
+from vehicle.skills.base_skill import Skill
 from vehicle.skills.util import core
 from vehicle.skills.util.motions import CableMotion
 from vehicle.skills.util.motions import LookatMotion
@@ -94,6 +98,7 @@ class PropertyTour(Skill):
         self.params.angle_margin = math.radians(0.75)  # [rad]
         self.params.giveup_utime = tm.seconds_to_utime(3)  # [s]
         self.params.giveup_speed = 0.1  # [m/s]
+        self.params.route_around_obstacles = True
 
         self.motions = []
         self.motion_index = None
@@ -104,7 +109,7 @@ class PropertyTour(Skill):
     def allow_manual_control(self):
         return self.state in (TourState.STOP, TourState.SETUP)
 
-    def button_pressed(self, api, button_id_pressed):
+    def button_pressed(self, api, button_id_pressed, source):  # pylint: disable=unused-argument
         if button_id_pressed == 'go':
             self.state = TourState.GOTO
 

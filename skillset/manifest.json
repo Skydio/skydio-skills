@@ -5,20 +5,6 @@
     "hint": "Send messages over HTTP",
     "short_name": "ComLink"
   },
-  "follow_modes.Lead": {
-    "display_name": "Lead2"
-  },
-  "follow_modes.Side": {
-    "display_name": "Side2"
-  },
-  "orbit_point.OrbitPoint": {
-    "display_name": "Orbit Point",
-    "explanation": "Double-tap to orbit a location in 3d"
-  },
-  "pano.Pano": {
-    "display_name": "Pano",
-    "hint": "Spin in place"
-  },
   "party_mode.PartyMode": {
     "display_name": "Party Mode",
     "explanation": "Look for people to follow for 15 seconds each.",
@@ -42,12 +28,6 @@
     "explanation": "Use an external computer and gamepad input device to send movement commands to the vehicle at high rate.",
     "hint": "Control the vehicle from a computer.",
     "short_name": "Remote"
-  },
-  "roof_inspection.RoofInspection": {
-    "display_name": "Roof Inspection",
-    "explanation": "Scan your roof",
-    "hint": "Scan your roof",
-    "short_name": "Inspection"
   },
   "security_bot.SecurityBot": {
     "display_name": "Security Bot",

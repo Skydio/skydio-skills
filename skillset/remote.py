@@ -1,9 +1,11 @@
+# Prepare for Python3 conversion
 from __future__ import absolute_import
 from __future__ import print_function
 import json
 import numpy as np
 
-from vehicle.skills.skills import Skill
+# The base class for all Skydio2 Skills
+from vehicle.skills.base_skill import Skill
 
 
 class MotionCommand(object):

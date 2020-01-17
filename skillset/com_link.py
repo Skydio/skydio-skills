@@ -4,7 +4,8 @@ from __future__ import print_function
 import json
 import numpy as np
 
-from vehicle.skills.skills import Skill
+# Import from the Skydio2 skills sdk
+from vehicle.skills.base_skill import Skill
 from vehicle.skills.util.ui import UiButton
 from vehicle.skills.util.motions.goto_motion import GotoMotion
 from vehicle.skills.util.transform import Transform
@@ -68,7 +69,7 @@ class ComLink(Skill):
         # Serialization format is arbitrary. Here we send json.
         return json.dumps(response)
 
-    def button_pressed(self, api, button_id):
+    def button_pressed(self, api, button_id, source):  # pylint: disable=unused-argument
         """ The user pressed a button in the Skydio app. """
         # Pressing the STOP button should cancel the motion.
         if button_id == 'stop':
@@ -105,7 +106,6 @@ class ComLink(Skill):
             api.phone.disable_movement_commands()
             self.motion.update(api)
 
-            
             api.planner.settings.obstacle_safety = 1.0
             api.movement.set_max_speed(10.0)
 

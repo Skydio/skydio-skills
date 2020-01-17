@@ -1,4 +1,6 @@
+# Prepare for Python3 conversion
 from __future__ import absolute_import
+from __future__ import print_function
 import enum
 import math
 import numpy as np
@@ -6,10 +8,11 @@ from numpy.linalg import norm
 import random
 import string
 
-from vehicle.skills.util import core
+# Import from the Skydio2 skills sdk
 import shared.util.error_reporter.error_reporter as er
 import shared.util.time_manager.time_manager as tm
-from vehicle.skills.skills import Skill
+from vehicle.skills.util import core
+from vehicle.skills.base_skill import Skill
 from vehicle.skills.util import LowPassFilter
 from vehicle.skills.util.ui import UiButton
 from vehicle.skills.util.ui import UiSlider
@@ -205,7 +208,7 @@ class PartyMode(Skill):
         controls['detail'] = detail
         return controls
 
-    def button_pressed(self, api, button_id):
+    def button_pressed(self, api, button_id, source):  # pylint: disable=unused-argument
         if button_id == 'resume':
             self.transition(api.utime, self.STATE.SEARCH)
         elif button_id == 'stop':
