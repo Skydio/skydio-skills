@@ -18,7 +18,6 @@ We've put together a skillset of sample skills that you can use to learn how the
 
 - [Polygon Path](skillset/polygon_path.py): Fly a path in the shape of a user-defined polygon.
 - [Property Tour](skillset/property_tour.py): Perform a series of cinematic motions to record a real estate video.
-- [Roof Inspection](skillset/roof_inspection.py): Fly a configurable scanning pattern over the roof of a house.
 - [Security Bot](skillset/security_bot.py): Follow anyone that gets within range of a home point, then return.
 - [Party Mode](skillset/party_mode.py): Automatically follow subjects for 15 seconds at a time within a defined area.
 - [Com Link](skillset/com_link.py): Communicate with a Skill from an external client using HTTP.
