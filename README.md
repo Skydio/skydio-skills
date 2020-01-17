@@ -1,11 +1,11 @@
 # Getting Started with the Skydio Skills SDK
 
 
-## NOTE: This is now only available to approved developers. For the remainder of this year (2019) and into next we are focusing our development resources on supporting a very small number of partners, which unfortunately means we cannot continue to support the beta Skills SDK that was made available for Skydio R1.
+## NOTE: This is now only available to approved developers.
 
 
-With this guide, you'll be able to create new Skills for the Skydio App to add custom behaviors to your R1.
-Skills are python scripts that run onboard R1 and provide basic UI elements inside the app.
+With this guide, you'll be able to create new Skills for Skydio 2.
+Skills are python scripts that run onboard the drone and provide basic UI elements inside the app.
 
 ![animation](assets/images/roof-inspection.gif)
 
@@ -22,7 +22,7 @@ We've put together a skillset of sample skills that you can use to learn how the
 - [Security Bot](skillset/security_bot.py): Follow anyone that gets within range of a home point, then return.
 - [Party Mode](skillset/party_mode.py): Automatically follow subjects for 15 seconds at a time within a defined area.
 - [Com Link](skillset/com_link.py): Communicate with a Skill from an external client using HTTP.
-- [Remote Control](skillset/remote.py): Fly R1 directly from a computer.
+- [Remote Control](skillset/remote.py): Fly directly from a computer.
 
 ## Client
 

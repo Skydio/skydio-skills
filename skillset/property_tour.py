@@ -40,7 +40,7 @@ class PropertyTour(Skill):
         UiSlider(
             identifier='speed',
             label='Speed',
-            detail="Maximum R1 speed during motion.",
+            detail="Maximum speed during motion.",
             units='m/s',
             min_value=0.1,
             max_value=8.0,
@@ -49,7 +49,7 @@ class PropertyTour(Skill):
         UiSlider(
             identifier='width',
             label='Width',
-            detail="The width of the house, assuming R1 is centered.",
+            detail="The width of the house, assuming drone is centered.",
             units='m',
             min_value=5,
             max_value=25,
@@ -58,7 +58,7 @@ class PropertyTour(Skill):
         UiSlider(
             identifier='depth',
             label='Depth',
-            detail="The depth of the house, assuming R1 is at one end.",
+            detail="The depth of the house, assuming drone is at one end.",
             units='m',
             min_value=0,
             max_value=50,
@@ -293,7 +293,7 @@ class PropertyTour(Skill):
 
         elif self.state == TourState.SETUP:
             title = 'Press Go to Begin Tour'
-            detail_text = 'R1 will automatically film the area.'
+            detail_text = 'Drone will automatically film the area.'
             controls_enabled = True
             show_stop = False
             targets_enabled = False
